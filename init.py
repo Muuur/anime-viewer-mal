@@ -34,30 +34,30 @@ else:
     while i < len(sys.argv):
         try:
             if sys.argv[i].lower() in ['-?', '--help']:
-                print("""MAL [ OPCIONES ] [ BÚSQUEDA ]
+                print("""MAL [ OPTIONS ] [ SEARCH ]
                 \nOpciones:
                 \r  -?, --help
-                \r  -v, --ver    Muestra la versión actual del programa
-                \r  -h, --home   Página HOME de myanimelist
-                \r  -y, --yo     Página de inicio de la página personal
-                \r  -f, --noopen Modo de no apertura
-                \r  -o, --online Modo online (consola)
-                \r  -l  + #      Accede a una sublista concreta (0-6)
-                \r  -r           Accede a un anime aleatorio de PTW
-                \r  -id + ID     Accede a un anime específico mediante ID
-                \nBúsqueda     Filtra la búsqueda general de animes
-                \r  Sin online   Accede a la página de los animes que coinciden
-                \r  Con online   Busca y muestra los resultados en consola
-                \nNo se pueden usar -h y -y con -o
-                \rCon -l se accede a la lista, sino se busca en general
-                \rEl valor predeterminado para -l es 0
-                \rEl modo -f impide acceder a imternet de forma externa
-                \rEl modo -o imprime en consola en vez de acceder a internet
-                \rEl modo -r Solo se puede usar con -l
-                \rEl modo -id no se puede usar con ningun otro""")
+                \r  -v, --ver    Show program version info
+                \r  -h, --home   Homepage of MAL
+                \r  -y, --yo     Personal webpage
+                \r  -f, --noopen No open mode
+                \r  -o, --online CLI mode
+                \r  -l  + #      Modify sublist access
+                \r  -r           Random PTW anime search
+                \r  -id + ID     Search by unique identifier os anime (by mal)
+                \nSearch         Filter by search
+                \r  No online    Jump to internet in search page
+                \r  With online  Search animes and show information in console
+                \nyou can't use -h or -y with -o
+                \rWith -l you modify the sublist where you want use
+                \rDefault value for -l is 0 (all)
+                \rThe mode -f is used to avoid ask if you want to open URLs out of console
+                \rThe mode -o uses console instead of browser
+                \rthe mode -r only admits -l
+                \rThe mode -id can't be followed by other modifier""")
                 exit(0)
             elif sys.argv[i].lower() in ('-v', '--ver'):
-                print("MAL - Version 3.0 multiplataforma\n\nMuuur software")
+                print("MAL - Multiplatform. Version 3.0 \n\nMuuur software")
                 exit(0)
             elif sys.argv[i].lower() == '-id':
                 if sys.argv[i + 1][0] == '-':
